@@ -116,3 +116,25 @@ hr {
   margin-block: 40px;
   gap: 100px;
 }
+
+.productInfo {
+  h1 {
+    font-size: 44px;
+    line-height: 48px;
+    color: #1D2026;
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #69707D;
+    margin-bottom: 24px;
+  }
+
+  strong {
+    font-size: 28px;
+    line-height: 24.73px;
+    color: #1D2026;
+  }
+}

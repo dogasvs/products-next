@@ -1,52 +1,28 @@
-"use client"
-import { useState, useEffect } from "react";
+import Shopping from "@/svgs/shopping/page";
 import Link from "next/link";
 
 export default async function ProductDetail({ params }) {
-  // const { id } = params; 
-  // const [product, setProduct] = useState(null);
-
-  // useEffect(() => {
-  //   const fetchProduct = async () => {
-  //     const res = await fetch(`https://dummyjson.com/products/${id}`);
-  //     const data = await res.json();
-  //     setProduct(data);
-  //   };
-
-  //   fetchProduct();
-  // }, [id]); 
-
-  // const [quantity, setQuantity] = useState(0); 
-
-  // const incrementQuantity = () => {
-  //   setQuantity(prev => prev + 1); 
-  // };
-
-  // const decrementQuantity = () => {
-  //   if (quantity > 1) {
-  //     setQuantity(prev => prev - 1); 
-  //   }
-  // };
+  const { id } = params; 
+  const res = await fetch(`https://dummyjson.com/products/${id}`);
+  const product = await res.json();
 
   return (
     <div className="productDetailContainer">
-      <Link href="/categories/allofthem">Back</Link>
-      {/* <div className="productContent">
-        <div className="productImage">
-          <img src={product.images} alt={product.title} />
-        </div>
-        <div className="productInfo">
-          <h1>{product.title}</h1>
-          <p>{product.description}</p>
-          <strong>💲 {product.price}</strong>
-          <div className="quantityControl">
-            <button onClick={decrementQuantity}>-</button>
-            <span>{quantity}</span>
-            <button onClick={incrementQuantity}>+</button>
-          </div>
-          <button>Sepete Ekle</button>
-        </div>
-      </div> */}
+    <Link href="/categories/allofthem">Back</Link>
+    <div className="productContent">
+      <div className="productImage">
+        <img src={product.thumbnail} alt={product.title} />
+      </div>
+      <div className="productInfo">
+        <h1>{product.title}</h1>
+        <p>{product.description}</p>
+        <strong>💲 {product.price}</strong>
+      <div className="quantityControl">
+        <input type="number" />
+      <button className="addtoCard"> <Shopping /> Add to cart</button>
+      </div>
+      </div>
     </div>
+  </div>
   );
 }

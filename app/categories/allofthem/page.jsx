@@ -7,9 +7,11 @@ export default async function AllofThem() {
         {products.map(x => (
           <div className="productItem" key={x.id}>
             <img src={x.thumbnail} alt="" />
+            <div className="productItemInfo">
             <span>⭐️{x.rating}</span> <br />
             <strong>{x.title}</strong>
             <p>${x.price}</p>
+            </div>
             <Link href={`/products/${x.id}`}>detail</Link>
           </div>
         ))}

@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default async function Beauty() {
   const res = await fetch("https://dummyjson.com/products/category/beauty");
-  const { products } = await res.json(); // Sadece beauty kategorisindeki ürünler
+  const { products } = await res.json(); 
 
-  console.log(products); // Beauty kategorisindeki ürünleri konsola yazdır
+  console.log(products);
 
   return (
     <div className="productContainer">

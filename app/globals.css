@@ -103,10 +103,11 @@ hr {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;  
+  box-shadow: rgb(103 103 103 / 8%) 0px 4px 12px;;  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 
   strong {
     display: block;
